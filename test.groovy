@@ -1,13 +1,13 @@
 pipeline {
   agent any
   tools {
-      terraform "0.13.5"
+      terraform "1.0.0"
   }
 
   stages {
     stage('Git Checkout') {
       steps {
-        url: 'https://github.com/fpereyrap/terraform-jk-test'
+        git credentialsId: 'test', url: 'https://github.com/fpereyrap/terraform-jk-test'
       }
     }
 
