@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-      terraform "1.0.0"
+      terraform "0.13.5"
   }
 
   stages {
