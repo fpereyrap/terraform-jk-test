@@ -1,5 +1,5 @@
-import common.Constants
-import common.Helpers
+// import common.Constants
+// import common.Helpers
 // def validProducts = ['p76']
 
 job("${seedBranchName}/test") {
@@ -33,15 +33,15 @@ job("${seedBranchName}/test") {
         }
     }
     environmentVariables {
-        groovy(Constants.BUILD_NAME_SCRIPT)
+        groovy(BUILD_NAME_SCRIPT="test.groovy")
     }
     scm {
         git {
             branch("*/${realBranchName}")
             remote {
-                name(Constants.REPO_NAME)
+                name(REPO_NAME='terraform-jk-test')
                 url('$GIT_URL')
-                credentials(Constants.REPO_CREDS)
+                // credentials(Constants.REPO_CREDS)
             }
             extensions {
                 cleanAfterCheckout()
