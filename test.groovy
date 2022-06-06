@@ -2,7 +2,7 @@
 // import common.Helpers
 // def validProducts = ['p76']
 
-job("${seedBranchName}/test") {
+job("main/test") {
     description('Runs terraform code aiming to Azure accounts')
     wrappers {
         maskPasswords()
