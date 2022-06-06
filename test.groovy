@@ -7,7 +7,7 @@ pipeline {
   stages {
     stage('Git Checkout') {
       steps {
-        git credentialsId: 'test', url: 'https://github.com/fpereyrap/terraform-jk-test'
+        git credentialsId: 'test', url: 'https://github.com/fpereyrap/terraform-jk-test.git'
       }
     }
 
